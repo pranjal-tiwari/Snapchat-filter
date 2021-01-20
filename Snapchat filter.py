@@ -30,7 +30,7 @@ file_name = input('Enter the name of the person:')
 # In[ ]:
 
 
-while True:
+while True: #for infinite loops 
     ret, frame = cap.read()
     
     if ret == False:
@@ -38,7 +38,7 @@ while True:
         
     #gray_frame = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
     
-    faces = face_cascade.detectMultiScale(frame,1.3,5)
+    faces = face_cascade.detectMultiScale(frame,scalefactor=1.3, 5) #see
     
     if len(faces) == 0:
         continue
